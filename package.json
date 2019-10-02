@@ -1,0 +1,34 @@
+{
+  "name": "rick-portal-gun",
+  "version": "1.0.0",
+  "description": "A site about Ricky And Morty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeandroLS/rick-portal-gun.git"
+  },
+  "keywords": [
+    "rick",
+    "morty",
+    "rick",
+    "and",
+    "morty"
+  ],
+  "author": "Leandro Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeandroLS/rick-portal-gun/issues"
+  },
+  "homepage": "https://github.com/LeandroLS/rick-portal-gun#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
