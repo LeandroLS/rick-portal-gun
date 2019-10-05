@@ -15,5 +15,16 @@ html(lang="en")
         main(class="project-description")
             h1(class="project-description__title rick-tittle") Rick Portal Gun
             p(class="project-description__subtitle rick-tittle") This site allow you to search a lot of content about the Rick and Morty series.
+            label(for="search-type") Select what you want to search
+            select
+                option(value="character" selected) Character
+                option(value="episode") Episode
+                option(value="location") Location
+            form(action="/")
+                label(for="character-name") Character name
+                input(type="text" name="character-name")
+                label(for="character-status" name="character status") Character status
+                input(type="text" name="character-status")
+                button Search
         footer(class="footer")
             a(href="https://leandrols.github.io", target="__blank") Blog
