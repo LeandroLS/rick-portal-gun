@@ -3,12 +3,17 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         title Rick Portal Gun
-        script(src="/css/main.css")
+        link(rel="stylesheet", href="/css/reset.css")
+        link(rel="stylesheet", href="/css/main.css")
     body
-        header
+        header(class="header")
             nav
-                a(href="/") Rick Portal Gun
-        main
-            h1 Rick Portal Gun
-        footer
+                ul
+                    li(class="header__link"): a(href="/") Rick Portal Gun
+                    li(class="header__link"): a About
+                    li(class="header__link"): a Github
+        main(class="project-description")
+            h1(class="project-description__title rick-tittle") Rick Portal Gun
+            p(class="project-description__subtitle rick-tittle") This site allow you to search a lot of content about the Rick and Morty series.
+        footer(class="footer")
             a(href="https://leandrols.github.io", target="__blank") Blog

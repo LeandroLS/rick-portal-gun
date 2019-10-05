@@ -1,4 +1,54 @@
-footer {
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('/images/rick-wallpaper.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header {
+    width: 100%;
+    padding: 16px;
+}
+
+.header__link {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0px 16px;
+}
+
+.header__link:hover {
+    border-bottom: 2px solid #8BCF21;
+}
+
+.project-description__title {
+    text-align: center;
+    font-size: 48px;
+}
+
+.project-description__subtitle {
+    text-align: center;
+    font-size: 32px;
+}
+
+.footer {
+    padding: 14px;
+    background-color: #3d373c;
     position: relative;
-    bottom: 0;
+}
+
+.rick-tittle {
+    color: #00afc8;
+    text-shadow: 1px 1px #d2e857;
+}
+
+a {
+    text-decoration: none;
+    color: #8BCF21;
+}
+
+a:visited {
+    color: #8BCF21;
 }
