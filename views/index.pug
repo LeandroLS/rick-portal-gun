@@ -23,10 +23,10 @@ html(lang="en")
                         option(value="character" selected) Character
                         option(value="episode") Episode
                         option(value="location") Location
-                    label(for="character-name" class="rick-tittle") Character name
-                    input(type="text" name="character-name" placeholder="Morty" class="search-form__input")
-                    label(for="character-status" name="character status" class="rick-tittle") Character status
-                    select(name="character-status" class="search-form__input")
+                    label(for="name" class="rick-tittle") Character name
+                    input(type="text" name="name" placeholder="Morty" class="search-form__input")
+                    label(for="satus" name="character status" class="rick-tittle") Character status
+                    select(name="satus" class="search-form__input")
                         option(value="alive" selected) Alive
                         option(value="dead") Dead
                         option(value="unknown") Unknown
@@ -35,9 +35,15 @@ html(lang="en")
                 each character in characters
                     div(class="card")
                         img(src=`${character.image}`, alt="descritive image", class="card__image")
-                        p(class="card__character-name") #{character.name}
-                        p(class="card__character-info") #{character.satus}
-                        p(class="card__character-info") #{character.gender}
-                        p(class="card__character-info") #{character.species}
+                        div(class="card__character-name") #{character.name}
+                        div(class="card__character-info") 
+                            span Status
+                            p #{character.status}
+                        div(class="card__character-info")
+                            span Gender
+                            p #{character.gender}
+                        div(class="card__character-info") 
+                            span Species
+                            p #{character.gender}
         footer(class="footer")
             a(href="https://leandrols.github.io", target="__blank") Blog

@@ -6,6 +6,8 @@ const rickandmortyapi = 'https://rickandmortyapi.com/api';
 router.get('/', (req, res) => {
     delete req.query['search-type'];
     let query = queryString.stringify(req.query);
-    axios.get(`${rickandmortyapi}/character/?${query}`).then(result => console.log(result.data.results));
+    axios.get(`${rickandmortyapi}/character/?${query}`).then(characters => {
+        res.render('index', { 'characters' : characters.data.results })
+    });
 });
 module.exports = router;
