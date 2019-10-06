@@ -32,13 +32,12 @@ html(lang="en")
                         option(value="unknown") Unknown
                     button Search
             section(class="api-data")
-                div(class="card")
-                    h1 sou uma div
-                div(class="card")
-                    h1 sou uma div
-                div(class="card")
-                    h1 sou uma div
-                div(class="card")
-                    h1 sou uma div    
+                each character in characters
+                    div(class="card")
+                        img(src=`${character.image}`, alt="descritive image", class="card__image")
+                        p(class="card__character-name") #{character.name}
+                        p(class="card__character-info") #{character.satus}
+                        p(class="card__character-info") #{character.gender}
+                        p(class="card__character-info") #{character.species}
         footer(class="footer")
             a(href="https://leandrols.github.io", target="__blank") Blog

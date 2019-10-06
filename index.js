@@ -8,8 +8,9 @@ app.set('views', 'views');
 app.use(express.static('public'));
 app.use('/character', characterRouter);
 app.get('/', async (req, res) => {
-    rickandmortyapi.getRandomChacters().then(result => console.log(result.data));
-    res.render('index');
+    rickandmortyapi.getRandomChacters().then(characters => {
+        res.render('index', { characters : characters.data });
+    });
 });
 console.log('rick-portal-gun listening port', port);
 app.listen('3000');
