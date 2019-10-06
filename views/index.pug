@@ -12,19 +12,33 @@ html(lang="en")
                     li(class="header__link"): a(href="/") Rick Portal Gun
                     li(class="header__link"): a About
                     li(class="header__link"): a Github
-        main(class="project-description")
-            h1(class="project-description__title rick-tittle") Rick Portal Gun
-            p(class="project-description__subtitle rick-tittle") This site allow you to search a lot of content about the Rick and Morty series.
-            label(for="search-type") Select what you want to search
-            select
-                option(value="character" selected) Character
-                option(value="episode") Episode
-                option(value="location") Location
-            form(action="/")
-                label(for="character-name") Character name
-                input(type="text" name="character-name")
-                label(for="character-status" name="character status") Character status
-                input(type="text" name="character-status")
-                button Search
+        main
+            section(class="project-description")
+                h1(class="project-description__title rick-tittle") Rick Portal Gun
+                p(class="project-description__subtitle rick-tittle") This site allow you to search a lot of content about the Rick and Morty series.
+            section
+                form(action="/character" method="get" class="search-form")
+                    label(for="search-type" class="rick-tittle") Select what you want to search
+                    select(name="search-type" class="search-form__input")
+                        option(value="character" selected) Character
+                        option(value="episode") Episode
+                        option(value="location") Location
+                    label(for="character-name" class="rick-tittle") Character name
+                    input(type="text" name="character-name" placeholder="Morty" class="search-form__input")
+                    label(for="character-status" name="character status" class="rick-tittle") Character status
+                    select(name="character-status" class="search-form__input")
+                        option(value="alive" selected) Alive
+                        option(value="dead") Dead
+                        option(value="unknown") Unknown
+                    button Search
+            section(class="api-data")
+                div(class="card")
+                    h1 sou uma div
+                div(class="card")
+                    h1 sou uma div
+                div(class="card")
+                    h1 sou uma div
+                div(class="card")
+                    h1 sou uma div    
         footer(class="footer")
             a(href="https://leandrols.github.io", target="__blank") Blog

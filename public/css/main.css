@@ -2,9 +2,10 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
 body {
     background-image: url('/images/rick-wallpaper.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -26,6 +27,10 @@ body {
     border-bottom: 2px solid #8BCF21;
 }
 
+main {
+    width: 80%;
+    margin: auto;
+}
 .project-description__title {
     text-align: center;
     font-size: 48px;
@@ -34,6 +39,35 @@ body {
 .project-description__subtitle {
     text-align: center;
     font-size: 32px;
+}
+
+.search-form {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.search-form__input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    opacity: 0.5;
+}
+
+.api-data {
+    height: 400px;
+}
+
+.card {
+    background-color: #E7E0DB;
+    width: 30%;
+    display: inline-block;
+    margin: 8px;
+    height: 45%;
+    border-radius: 4px;
 }
 
 .footer {
@@ -54,4 +88,16 @@ a {
 
 a:visited {
     color: #8BCF21;
+}
+
+button {
+    padding: 8px;
+    background-color: #d2e857;
+    border: none;
+    /* color:white; */
+}
+
+button:hover {
+    background-color: #00afc8;
+    color: white;
 }
