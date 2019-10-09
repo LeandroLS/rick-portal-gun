@@ -1,12 +1,13 @@
-* {
-    font-family: sans-serif;
+*, body {
+    font-family: 'Viga', sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    background-image: url('/images/rick-wallpaper.png');
-    background-size: cover;
+    background-image: url('/images/rick-wallpaper2.png');
+    background-size: contain;
     background-repeat: no-repeat;
+    background-color: #1A191A;
 }
 
 .header {
@@ -27,6 +28,7 @@ body {
     border-bottom: 2px solid #8BCF21;
 }
 
+
 main {
     width: 80%;
     margin: auto;
@@ -37,6 +39,7 @@ main {
 }
 
 .project-description__subtitle {
+    padding-top: 2%;
     text-align: center;
     font-size: 32px;
 }
@@ -102,11 +105,6 @@ main {
     width: calc(100% - 65px);
 }
 
-.footer {
-    padding: 14px;
-    background-color: #3d373c;
-    /* position: relative; */
-}
 
 .rick-tittle {
     color: #00afc8;
@@ -118,9 +116,6 @@ a {
     color: #8BCF21;
 }
 
-a:visited {
-    color: #8BCF21;
-}
 
 button {
     padding: 8px;
@@ -144,6 +139,8 @@ button:hover,
 
 .pagination__item {
     display: inline-block;
-    padding: 12px;
+    padding: 18px;
     background-color: #d2e857;
+    color: black;
+    border-right: 1px solid black;
 }

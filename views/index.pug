@@ -5,24 +5,20 @@ html(lang="en")
         title Rick Portal Gun
         link(rel="stylesheet", href="/css/reset.css")
         link(rel="stylesheet", href="/css/main.css")
+        <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet"> 
     body
         header(class="header")
             nav
                 ul
                     li(class="header__link"): a(href="/") Rick Portal Gun
-                    li(class="header__link"): a About
-                    li(class="header__link"): a Github
+                    li(class="header__link"): a(href="https://github.com/LeandroLS/rick-portal-gun" target="__blank") Github
+                    li(class="header__link"): a(href="https://leandrols.github.io", target="__blank") Blog
         main
             section(class="project-description")
                 h1(class="project-description__title rick-tittle") Rick Portal Gun
-                p(class="project-description__subtitle rick-tittle") This site allow you to search a lot of content about the Rick and Morty series.
+                p(class="project-description__subtitle rick-tittle") This site allow you to search a lot of content about the Rick and Morty series characters.
             section
                 form(action="/character" method="get" class="search-form")
-                    label(for="search-type" class="rick-tittle") Select what you want to search
-                    select(name="search-type" class="search-form__input")
-                        option(value="character" selected) Character
-                        option(value="episode") Episode
-                        option(value="location") Location
                     label(for="name" class="rick-tittle") Character name
                     input(type="text" name="name" placeholder="Morty" class="search-form__input")
                     label(for="satus" name="character status" class="rick-tittle") Character status
@@ -46,12 +42,8 @@ html(lang="en")
                             span Species
                             p #{character.gender}
                 if pagesInfo && pagesInfo.pages > 1
-                    h1 passei aqui
                     - var pagesIterator = 0;
                     div(class="pagination")
                         while pagesIterator < pagesInfo.pages
                             - pagesIterator++
-                            div(class="pagination__item")
-                                a(href=`http://localhost:3000/character?${queryString}&page=${pagesIterator}`) #{pagesIterator}
-        footer(class="footer")
-            a(href="https://leandrols.github.io", target="__blank") Blog
+                            a(href=`http://localhost:3000/character?${queryString}&page=${pagesIterator}` class="pagination__item") #{pagesIterator}
