@@ -8,5 +8,6 @@ This site consumes the [The Rick And Morty API](https://rickandmortyapi.com/) to
 2. ```npm install```  
 3. ```npm start ```  
 4. On your browser: localhost:3000  
+## Why ?  
 I've created this site because I have to practice my CSS skills, creating a site which serve content about one my favorite series was a good idea to achieve my goal xD
 
