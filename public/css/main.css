@@ -12,16 +12,16 @@ body {
 
 .header {
     width: 100%;
-    padding: 16px;
+    padding: 1rem;
 }
 
 .header__link {
     display: inline-block;
-    margin: 0px 16px;
+    margin: 0px 1rem;
 }
 
 .header__link a {
-    padding-bottom: 3px;
+    padding-bottom: 0.2rem;
 }
 
 .header__link a:hover {
@@ -33,31 +33,32 @@ main {
     width: 80%;
     margin: auto;
 }
+
 .project-description__title {
     text-align: center;
-    font-size: 48px;
+    font-size: 2.8rem;
 }
 
 .project-description__subtitle {
     padding-top: 2%;
     text-align: center;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .search-form {
     height: 300px;
     width: 300px;
     margin: auto;
-    margin-top: 36px;
-    margin-bottom: 8px;
-    font-size: 18px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .search-form__input {
     width: 100%;
-    padding: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border-radius: 5px;
 }
 
@@ -88,15 +89,15 @@ main {
 
 .card__character-name {
     text-align: center;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin-top: 6px;
+    margin-top: 0.4rem;
 }
 
 .card__character-info {
-    margin-top: 6px;
-    margin-left: 6px;
-    padding: 6px;
+    margin-top: 0.4rem;
+    margin-left: 0.4rem;
+    padding: 0.4rem;
 }
 
 .card__character-info p {
@@ -118,7 +119,7 @@ a {
 
 
 button {
-    padding: 8px;
+    padding: 0.5rem;
     background-color: #d2e857;
     border: none;
     border-radius: 5px;
@@ -139,7 +140,7 @@ button:hover,
 
 .pagination__item {
     display: inline-block;
-    padding: 18px;
+    padding: 1.1rem;
     background-color: #d2e857;
     color: black;
     border-right: 1px solid black;
