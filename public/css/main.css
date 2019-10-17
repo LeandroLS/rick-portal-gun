@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: 100vw;
     padding: 1rem;
 }
 
@@ -30,7 +30,7 @@ body {
 
 
 main {
-    width: 80%;
+    width: 80vw;
     margin: auto;
 }
 
@@ -46,8 +46,8 @@ main {
 }
 
 .search-form {
-    height: 300px;
-    width: 300px;
+    height: 30vh;
+    width: 20vw;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -63,14 +63,15 @@ main {
 }
 
 .api-data {
-    height: 1000px;
+    height: 85vh;
     height: auto;
     text-align: center;
 }
 
 .card {
     background-color: #E7E0DB;
-    width: 300px;
+    width: 30vw;
+    max-width: 300px;
     display: inline-block;
     margin: 1%;
     height: 45%;
@@ -83,6 +84,8 @@ main {
 }
 
 .card__image {
+    max-width: 300px;
+    max-height: 300px;
     width: 100%;
     height: auto;
 }
@@ -132,7 +135,7 @@ button:hover,
 }
 
 .pagination {
-    width: 50%;
+    width: 50vw;
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
