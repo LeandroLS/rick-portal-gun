@@ -100,13 +100,25 @@ main {
 .card__character-info {
     margin-top: 0.4rem;
     margin-left: 0.4rem;
-    padding: 0.4rem;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.card__character-info p {
+.card__character-info--title {
+    width: 50%;
+    text-align: center;
     display: inline-block;
-    text-align: right;
-    width: calc(100% - 65px);
+}
+
+.card__character-info--value {
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    color: orange;
 }
 
 

@@ -33,14 +33,14 @@ html(lang="en")
                         img(src=`${character.image}`, alt="descritive image", class="card__image")
                         div(class="card__character-name") #{character.name}
                         div(class="card__character-info") 
-                            span Status
-                            p #{character.status}
+                            span(class="card__character-info--title") Status
+                            span(class="card__character-info--value") #{character.status}
                         div(class="card__character-info")
-                            span Gender
-                            p #{character.gender}
+                            span(class="card__character-info--title") Gender
+                            span(class="card__character-info--value") #{character.gender}
                         div(class="card__character-info") 
-                            span Species
-                            p #{character.gender}
+                            span(class="card__character-info--title") Species
+                            span(class="card__character-info--value") #{character.species}
                 if pagesInfo && pagesInfo.pages > 1
                     - var pagesIterator = 0;
                     div(class="pagination")
