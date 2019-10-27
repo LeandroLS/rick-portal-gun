@@ -10,6 +10,8 @@ app.use('/character', characterRouter);
 app.get('/', async (req, res) => {
     rickandmortyapi.getRandomChacters().then(characters => {
         res.render('index', { characters : characters.data });
+    }).catch(err => {
+        res.render('index', { err : true });
     });
 });
 console.log('rick-portal-gun listening port', port);

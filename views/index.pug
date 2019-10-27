@@ -18,37 +18,40 @@ html(lang="en")
             section(class="project-description")
                 h1(class="project-description__title rick-tittle") Rick Portal Gun
                 p(class="project-description__subtitle rick-tittle") Here you can search a lot of content about the Rick and Morty series characters.
-            section
-                form(action="/character" method="get" class="search-form")
-                    label(for="name" class="rick-tittle") Character name
-                    br
-                    input(type="text" name="name" placeholder="Morty" class="search-form__input")
-                    br
-                    label(for="satus" name="character status" class="rick-tittle") Character status
-                    br
-                    select(name="status" class="search-form__input")
-                        option(value="alive" selected) Alive
-                        option(value="dead") Dead
-                        option(value="unknown") Unknown
-                    br
-                    button Search
-            section(class="api-data")
-                each character in characters
-                    div(class="card")
-                        img(src=`${character.image}`, alt="descritive image", class="card__image")
-                        div(class="card__character-name") #{character.name}
-                        div(class="card__character-info") 
-                            span(class="card__character-info--title") Status
-                            span(class="card__character-info--value") #{character.status}
-                        div(class="card__character-info")
-                            span(class="card__character-info--title") Gender
-                            span(class="card__character-info--value") #{character.gender}
-                        div(class="card__character-info") 
-                            span(class="card__character-info--title") Species
-                            span(class="card__character-info--value") #{character.species}
-                if pagesInfo && pagesInfo.pages > 1
-                    - var pagesIterator = 0;
-                    div(class="pagination")
-                        while pagesIterator < pagesInfo.pages
-                            - pagesIterator++
-                            a(href=`http://localhost:3000/character?${queryString}&page=${pagesIterator}` class="pagination__item") #{pagesIterator}
+            if err
+                h1(class="error-message") Something is wrong with Rick and Morty's API. Try again later.
+            else 
+                section
+                    form(action="/character" method="get" class="search-form")
+                        label(for="name" class="rick-tittle") Character name
+                        br
+                        input(type="text" name="name" placeholder="Morty" class="search-form__input")
+                        br
+                        label(for="satus" name="character status" class="rick-tittle") Character status
+                        br
+                        select(name="status" class="search-form__input")
+                            option(value="alive" selected) Alive
+                            option(value="dead") Dead
+                            option(value="unknown") Unknown
+                        br
+                        button Search
+                section(class="api-data")                
+                    each character in characters
+                        div(class="card")
+                            img(src=`${character.image}`, alt="descritive image", class="card__image")
+                            div(class="card__character-name") #{character.name}
+                            div(class="card__character-info") 
+                                span(class="card__character-info--title") Status
+                                span(class="card__character-info--value") #{character.status}
+                            div(class="card__character-info")
+                                span(class="card__character-info--title") Gender
+                                span(class="card__character-info--value") #{character.gender}
+                            div(class="card__character-info") 
+                                span(class="card__character-info--title") Species
+                                span(class="card__character-info--value") #{character.species}
+                    if pagesInfo && pagesInfo.pages > 1
+                        - var pagesIterator = 0;
+                        div(class="pagination")
+                            while pagesIterator < pagesInfo.pages
+                                - pagesIterator++
+                                a(href=`http://localhost:3000/character?${queryString}&page=${pagesIterator}` class="pagination__item") #{pagesIterator}

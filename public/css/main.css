@@ -8,6 +8,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #1A191A;
+    background-position: center;
 }
 
 .header {
@@ -175,4 +176,12 @@ button:hover,
     background-color: #d2e857;
     color: black;
     border-right: 1px solid black;
+}
+
+.error-message {
+    color: #c8001b;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
 }
