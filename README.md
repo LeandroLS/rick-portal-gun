@@ -13,5 +13,5 @@ This site consumes the [The Rick And Morty API](https://rickandmortyapi.com/) to
 1. ```cd path/to/rick-portal-gun```  
 2. ```docker-compose up```   
 ## Why ?  
-I've created this site because I haved to practice my CSS skills, creating a site which serve content about one my favorite series was a good idea to achieve my goal xD
+I've created this site because I haved to practice my CSS and Docker skills, creating a site which serve content about one my favorite series was a good idea to achieve my goal xD
 
