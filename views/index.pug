@@ -20,15 +20,21 @@ html(lang="en")
     script(type='text/jsx').
         class App extends React.Component {
             render(){
+                const haveError = this.props.erro;
+                let data;
+                if(haveError){
+                    data = <h1> Something goes wrong </h1>
+                } else {
+                    data = <Card />
+                }
                 return (
                     <div>
                         <Header />
                         <main>
                             <Description />
                             <Form />
-                            <h1> {this.props.mensagem} </h1>
                             <section className="api-data">
-                                <Card />
+                                {data}
                             </section>
                         </main>
                     </div>
@@ -36,4 +42,4 @@ html(lang="en")
             }
         }
         const domContainer = document.querySelector('#root');
-        ReactDOM.render(<App mensagem='!{mensagem}'/>, domContainer);
+        ReactDOM.render(<App erro='!{erro}'/>, domContainer);

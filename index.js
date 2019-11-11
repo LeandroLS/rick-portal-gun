@@ -8,7 +8,7 @@ app.set('views', 'views');
 app.use(express.static('public'));
 app.use('/character', characterRouter);
 app.get('/', async (req, res) => {
-    return res.render('index', { mensagem: 'sou uma mensagem'});
+    return res.render('index', { erro: true});
     rickandmortyapi.getRandomChacters().then(characters => {
         res.render('index', { characters : characters.data });
     }).catch(err => {
