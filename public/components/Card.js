@@ -22,5 +22,3 @@ class Card extends React.Component {
         );
     }
 }
-const domContainer = document.querySelector('#button');
-ReactDOM.render(<Card />, domContainer);

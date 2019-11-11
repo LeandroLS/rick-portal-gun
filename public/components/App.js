@@ -18,4 +18,4 @@ class App extends React.Component {
     }
 }
 const domContainer = document.querySelector('#root');
-ReactDOM.render(<App mensagem="ola, sou props"/>, domContainer);
+ReactDOM.render(<App mensagem='!{mensagem}'/>, domContainer);
