@@ -1,15 +1,21 @@
+'use strict';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RickAndMortyAPI from '../resources/RickMortyAPI';
+import Card from './Card';
+import Description from './Description';
+import Header from './Header';
+import Form from './Form';
 class App extends Component {
     render(props) {
-        var character = this.props.character;
         return (
             <div>
-                {character}
-                <h1> Sou um componente </h1>
+                <Header />
+                <Description />
+                <Form />
+                <Card />
             </div>
         )
     }
 }
-ReactDOM.render(<App character={'ola'}/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

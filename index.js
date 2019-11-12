@@ -7,7 +7,7 @@ app.set('views', 'views');
 app.use(express.static('public'));
 app.use('/character', characterRouter);
 app.get('/', async (req, res) => {
-    res.render('teste');
+    res.render('index');
 });
 console.log('rick-portal-gun listening port', port);
 app.listen('3000');
