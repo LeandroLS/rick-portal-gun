@@ -39,6 +39,7 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "nodemon": "^1.19.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"

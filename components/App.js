@@ -8,6 +8,16 @@ import Header from './Header';
 import Form from './Form';
 class App extends Component {
     render(props) {
+
+        this.state = {
+            characters: []
+        }
+
+        RickAndMortyAPI.getRandomCharacters().then(characters => {
+            console.log('passei aqui');
+        });
+        
+        console.log(this.state);
         return (
             <div>
                 <Header />
