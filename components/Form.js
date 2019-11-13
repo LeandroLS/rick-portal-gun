@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
 class Form extends React.Component {
-    render(){
+    render(props){
         return (
             <section>
                 <form action="/character" method="get" className="search-form">
@@ -14,7 +14,7 @@ class Form extends React.Component {
                         <option value="unknown"> Unknown </option>
                     </select>
                     <br></br>
-                    <button> Search </button>
+                    <button type="button" onClick={this.props.submitForm}> Search </button>
                 </form>
             </section>
         );

@@ -7,6 +7,7 @@ import Description from './Description';
 import Header from './Header';
 import Form from './Form';
 import Pagination from './Pagination';
+import Axios from 'axios';
 class App extends Component {
     constructor(props){
         super(props);
@@ -22,13 +23,22 @@ class App extends Component {
 
     }
 
-    hasError(){
+    async submitForm() {
+        await Axios.get('/character').then(data => {
+            console.log(data);
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+
+    ifNotErrorShowForm(){
         if(this.state.erro){
-            return <h1 className="error-message"> Something is wrong with Rick And Morty API. Try again later. </h1>
+            return <h1 className="error-message"> Something is wrong with Rick And Morty API. Try again later. 
+                    <Form submitForm={this.submitForm}/>
+             </h1> 
         } else {
             return (
                 <div>
-                    <Form />
                     <section className="api-data">
                         {
                             this.state.characters.map(character => {
@@ -51,7 +61,7 @@ class App extends Component {
             <div>
                 <Header />
                 <Description />
-                {this.hasError()}
+                {this.ifNotErrorShowForm()}
             </div>
         )
     }
