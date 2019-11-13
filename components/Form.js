@@ -8,7 +8,7 @@ class Form extends React.Component {
                     <label className="rick-tittle"> Character name </label> <br></br>
                     <input type="text" name="name" placeholder="Morty" className="search-form__input"></input> <br></br>
                     <label className="rick-tittle"> Character status </label> <br></br>
-                    <select className="search-form__input">
+                    <select name="status" className="search-form__input">
                         <option value="alive"> Alive </option>
                         <option value="dead"> Dead </option>
                         <option value="unknown"> Unknown </option>

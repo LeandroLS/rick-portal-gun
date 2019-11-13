@@ -7,11 +7,8 @@ router.get('/', (req, res) => {
     delete req.query['search-type'];
     let query = queryString.stringify(req.query);
     axios.get(`${rickandmortyapi}/character/?${query}`).then(characters => {
-        res.render('index', { 
-            'characters' : characters.data.results,
-            'pagesInfo' : characters.data.info,
-            'queryString' : query
-        });
+        res.send(characters.data.results);
+        return characters.data.results;
     });
 });
 module.exports = router;
