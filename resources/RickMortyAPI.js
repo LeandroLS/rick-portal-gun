@@ -7,7 +7,7 @@ module.exports = {
         return Math.floor(Math.random() * maxOfCharacters);
     },
 
-    async getRandomChacters(){
+    async getRandomCharacters(){
         let numberOfRandomNumbers = 6;
         let randomNumbers = [];
         for (let index = 0; index < numberOfRandomNumbers; index++) {

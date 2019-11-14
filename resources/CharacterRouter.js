@@ -4,13 +4,16 @@ const queryString = require('querystring');
 const axios = require('axios');
 const rickandmortyapi = 'https://rickandmortyapi.com/api';
 router.get('/', (req, res) => {
-    delete req.query['search-type'];
     let query = queryString.stringify(req.query);
     axios.get(`${rickandmortyapi}/character/?${query}`).then(characters => {
-        res.render('index', { 
-            'characters' : characters.data.results,
-            'pagesInfo' : characters.data.info,
-            'queryString' : query
+        res.send({
+            characters : characters.data.results,
+            info: characters.data.info
+        });
+    }).catch(erro =>{
+        res.send({ 
+            erro : true,
+            message: erro.response.data
         });
     });
 });
