@@ -9,5 +9,4 @@ app.use('/character', CharacterRouter);
 app.get('/', async (req, res) => {
     res.render('index');
 });
-console.log('rick-portal-gun listening port', port);
 app.listen('3000');
