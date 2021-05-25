@@ -10,7 +10,7 @@ const Card = (props) => {
                 <span className="card__character-info--value"> {props.status} </span>
             </div>
             <div className="card__character-info">
-                <span className="card__character-info-title"> Gender </span>
+                <span className="card__character-info-title"> Gender AB</span>
                 <span className="card__character-info--value"> {props.gender} </span>
             </div>
             <div className="card__character-info">
