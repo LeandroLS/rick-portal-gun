@@ -8,11 +8,11 @@ on:
   push:
     branches: [ master ]
     paths:
-     - '..\components\**.js'
+     - 'components/*'
   pull_request:
     branches: [ master ]
     paths:
-     - '..\components\**.js'
+     - 'components/*'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
