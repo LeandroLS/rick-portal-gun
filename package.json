@@ -4,7 +4,7 @@
   "description": "A site about Ricky And Morty",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: nenhum teste especificado\" && exit 1",
+    "test": "echo \"Error: nenhum teste especificado\"",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "webpack"
